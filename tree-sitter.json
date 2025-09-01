@@ -6,10 +6,13 @@
       "path": ".",
       "scope": "source.epics_msi_substitution",
       "file-types": [
-        "epics_msi_substitution"
+        "sub",
+        "subs",
+        "substitutions"
       ],
       "injection-regex": "^epics_msi_substitution$",
-      "highlights": "queries/highlights.scm"
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm"
     }
   ],
   "metadata": {
