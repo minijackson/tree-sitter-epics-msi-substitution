@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-epics-msi-substitution
-        VERSION "0.1.2"
+        VERSION "0.1.3"
         DESCRIPTION "tree-sitter grammar for EPICS' .substitutions files"
         HOMEPAGE_URL "https://github.com/minijackson/tree-sitter-epics-msi-substitution"
         LANGUAGES C)
