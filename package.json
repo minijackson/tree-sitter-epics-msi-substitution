@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-epics-msi-substitution",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "tree-sitter grammar for EPICS' .substitutions files",
   "repository": "https://github.com/minijackson/tree-sitter-epics-msi-substitution",
   "license": "MIT",
