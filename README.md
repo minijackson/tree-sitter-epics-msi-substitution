@@ -1,18 +1,19 @@
-# tree-sitter-epics_msi_substitution
+# tree-sitter-epics-msi-substitution
 
 [![CI][ci]](https://github.com/minijackson/tree-sitter-epics_msi_substitution/actions/workflows/ci.yml)
 [![discord][discord]](https://discord.gg/w7nTvsVJhm)
 [![matrix][matrix]](https://matrix.to/#/#tree-sitter-chat:matrix.org)
-<!-- NOTE: uncomment these if you're publishing packages: -->
-<!-- [![npm][npm]](https://www.npmjs.com/package/tree-sitter-epics_msi_substitution) -->
-<!-- [![crates][crates]](https://crates.io/crates/tree-sitter-epics_msi_substitution) -->
-<!-- [![pypi][pypi]](https://pypi.org/project/tree-sitter-epics_msi_substitution/) -->
+[![npm][npm]](https://www.npmjs.com/package/tree-sitter-epics_msi_substitution)
+[![crates][crates]](https://crates.io/crates/tree-sitter-epics_msi_substitution)
+[![pypi][pypi]](https://pypi.org/project/tree-sitter-epics_msi_substitution/)
 
-A Tree-sitter parser for epics_msi_substitution files.
+Tree-sitter grammar for EPICS' .substitutions files
 
 ## References
 
-<!-- NOTE: add the grammar's references here -->
+- [EPICS' MSI documentation](https://epics.anl.gov/EpicsDocumentation/ExtensionsManuals/msi/msi.html)
+- [EPICS' implementation in `dbLoadTemplate_lex.l`](https://github.com/epics-base/epics-base/blob/7.0/modules/database/src/ioc/dbtemplate/dbLoadTemplate_lex.l)
+- [EPICS' implementation in `dbLoadTemplate.y`](https://github.com/epics-base/epics-base/blob/7.0/modules/database/src/ioc/dbtemplate/dbLoadTemplate.y)
 
 [ci]: https://img.shields.io/github/actions/workflow/status/minijackson/tree-sitter-epics_msi_substitution/ci.yml?logo=github&label=CI
 [discord]: https://img.shields.io/discord/1063097320771698699?logo=discord&label=discord

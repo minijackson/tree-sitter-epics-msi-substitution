@@ -1,4 +1,4 @@
-"""EpicsMsiSubstitution grammar for tree-sitter"""
+"""tree-sitter grammar for EPICS' .substitutions files"""
 
 from importlib.resources import files as _files
 

@@ -1,13 +1,13 @@
 [package]
 name = "tree-sitter-epics-msi-substitution"
-description = "EpicsMsiSubstitution grammar for tree-sitter"
+description = "tree-sitter grammar for EPICS' .substitutions files"
 version = "0.1.0"
-authors = ["Rémi NICOLE"]
+authors = ["Rémi NICOLE <remi.nicole@cea.fr>"]
 license = "MIT"
 readme = "README.md"
 keywords = ["incremental", "parsing", "tree-sitter", "epics-msi-substitution"]
 categories = ["parser-implementations", "parsing", "text-editors"]
-repository = "https://github.com/minijackson/tree-sitter-epics_msi_substitution"
+repository = "https://github.com/minijackson/tree-sitter-epics-msi-substitution"
 edition = "2021"
 autoexamples = false
 

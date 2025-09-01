@@ -3,7 +3,7 @@ $(error Windows is not supported)
 endif
 
 LANGUAGE_NAME := tree-sitter-epics-msi-substitution
-HOMEPAGE_URL := https://github.com/minijackson/tree-sitter-epics_msi_substitution
+HOMEPAGE_URL := https://github.com/minijackson/tree-sitter-epics-msi-substitution
 VERSION := 0.1.0
 
 # repository

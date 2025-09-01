@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-epics-msi-substitution
         VERSION "0.1.0"
-        DESCRIPTION "EpicsMsiSubstitution grammar for tree-sitter"
-        HOMEPAGE_URL "https://github.com/minijackson/tree-sitter-epics_msi_substitution"
+        DESCRIPTION "tree-sitter grammar for EPICS' .substitutions files"
+        HOMEPAGE_URL "https://github.com/minijackson/tree-sitter-epics-msi-substitution"
         LANGUAGES C)
 
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)

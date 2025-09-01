@@ -1,4 +1,4 @@
-module github.com/minijackson/tree-sitter-epics_msi_substitution
+module github.com/minijackson/tree-sitter-epics-msi-substitution
 
 go 1.22
 

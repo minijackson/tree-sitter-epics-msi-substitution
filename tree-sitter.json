@@ -10,20 +10,22 @@
         "subs",
         "substitutions"
       ],
-      "injection-regex": "^epics_msi_substitution$",
+      "injection-regex": "^((epics-)?msi-)?substitutions?$",
       "highlights": "queries/highlights.scm",
       "injections": "queries/injections.scm"
     }
   ],
   "metadata": {
     "links": {
-      "repository": "https://github.com/minijackson/tree-sitter-epics_msi_substitution"
+      "repository": "https://github.com/minijackson/tree-sitter-epics-msi-substitution"
     },
     "version": "0.1.0",
     "license": "MIT",
+    "description": "tree-sitter grammar for EPICS' .substitutions files",
     "authors": [
       {
-        "name": "Rémi NICOLE"
+        "name": "Rémi NICOLE",
+        "email": "remi.nicole@cea.fr"
       }
     ]
   }
