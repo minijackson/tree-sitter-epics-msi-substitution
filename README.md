@@ -11,7 +11,7 @@ Tree-sitter grammar for EPICS' .substitutions files
 
 ## References
 
-- [EPICS' MSI documentation](https://epics.anl.gov/EpicsDocumentation/ExtensionsManuals/msi/msi.html)
+- [EPICS' MSI documentation](https://docs.epics-controls.org/projects/base/en/latest/msi.html)
 - [EPICS' implementation in `dbLoadTemplate_lex.l`](https://github.com/epics-base/epics-base/blob/7.0/modules/database/src/ioc/dbtemplate/dbLoadTemplate_lex.l)
 - [EPICS' implementation in `dbLoadTemplate.y`](https://github.com/epics-base/epics-base/blob/7.0/modules/database/src/ioc/dbtemplate/dbLoadTemplate.y)
 
