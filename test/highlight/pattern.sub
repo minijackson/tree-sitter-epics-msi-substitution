@@ -1,0 +1,39 @@
+global {a=1}
+# <- @keyword
+#      ^ @punctuation.bracket
+#       ^ @identifier
+#        ^ @punctuation.special
+#         ^ @string
+#          ^ @punctuation.bracket
+
+pattern {var1, var2}
+# <- @keyword
+#       ^ @punctuation.bracket
+#        ^ @identifier
+#            ^ @punctuation.delimiter
+#              ^ @identifier
+#                  ^ @punctuation.bracket
+
+    global {a=1}
+#   ^ @keyword
+#          ^ @punctuation.bracket
+#           ^ @identifier
+#            ^ @punctuation.special
+#             ^ @string
+#              ^ @punctuation.bracket
+
+    {set1_val1, "set1_val2"}
+#   ^ @punctuation.bracket
+#    ^ string
+#             ^ @punctuation.delimiter
+#               ^ string
+#                ^ string
+#                          ^ @punctuation.bracket
+
+    global {a=1}
+#   ^ @keyword
+#          ^ @punctuation.bracket
+#           ^ @identifier
+#            ^ @punctuation.special
+#             ^ @string
+#              ^ @punctuation.bracket

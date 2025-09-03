@@ -1,0 +1,30 @@
+global {M1=hello, M2="hello"}
+# <- @keyword
+#      ^ @punctuation.bracket
+#       ^ @identifier
+#         ^ @punctuation.special
+#          ^ @string
+#               ^ @punctuation.delimiter
+#                 ^ @identifier
+#                   ^ @punctuation.special
+#                    ^ @string
+#                     ^ @string
+#                           ^ @punctuation.bracket
+
+{M1=hello, M2="hello\"${P}"}
+# <- @punctuation.bracket
+# ^ @identifier
+#  ^ @punctuation.special
+#   ^ @string
+#        ^ @punctuation.delimiter
+#          ^ @identifier
+#            ^ @punctuation.special
+#             ^ @string
+#              ^ @string
+#                   ^ @string.special
+#                     ^ @punctuation.bracket
+#                      ^ @punctuation.bracket
+#                       ^ @string.special
+#                        ^ @punctuation.bracket
+#                         ^ @string
+#                          ^ @punctuation.bracket

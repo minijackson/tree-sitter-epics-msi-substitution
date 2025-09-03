@@ -1,0 +1,63 @@
+global {A=1}
+# <- @keyword
+#      ^ @punctuation.bracket
+#       ^ @identifier
+#        ^ @punctuation.special
+#         ^ @string
+#          ^ @punctuation.bracket
+
+file myDBfile.template {
+# <- @keyword
+#    ^ @string
+#                      ^ @punctuation.bracket
+
+    global {A=1}
+#   ^ @keyword
+#          ^ @punctuation.bracket
+#           ^ @identifier
+#            ^ @punctuation.special
+#             ^ @string
+#              ^ @punctuation.bracket
+
+    pattern { B }
+#   ^ @keyword
+#           ^ @punctuation.bracket
+#             ^ @identifier
+#               ^ @punctuation.bracket
+
+        global {A=1}
+#       ^ @keyword
+#              ^ @punctuation.bracket
+#               ^ @identifier
+#                ^ @punctuation.special
+#                 ^ @string
+#                  ^ @punctuation.bracket
+
+        { 1 }
+#       ^ @punctuation.bracket
+#         ^ @string
+#           ^ @punctuation.bracket
+
+        global {A=1}
+#       ^ @keyword
+#              ^ @punctuation.bracket
+#               ^ @identifier
+#                ^ @punctuation.special
+#                 ^ @string
+#                  ^ @punctuation.bracket
+
+        { 2 }
+#       ^ @punctuation.bracket
+#         ^ @string
+#           ^ @punctuation.bracket
+
+        global {A=1}
+#       ^ @keyword
+#              ^ @punctuation.bracket
+#               ^ @identifier
+#                ^ @punctuation.special
+#                 ^ @string
+#                  ^ @punctuation.bracket
+
+}
+# <- @punctuation.bracket
