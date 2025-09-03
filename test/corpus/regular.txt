@@ -1,0 +1,60 @@
+==============
+Simple regular
+==============
+
+{A=1,B=2}
+{A="1",B="2"}
+{A=1,B="2"}
+
+---
+
+(source_file
+ (regular
+  (definition variable: (identifier) value: (string))
+  (definition variable: (identifier) value: (string)))
+ (regular
+  (definition
+   variable: (identifier)
+   value: (string (quoted_string (quoted_string_text_fragment))))
+  (definition
+   variable: (identifier)
+   value: (string (quoted_string (quoted_string_text_fragment)))))
+ (regular
+  (definition variable: (identifier) value: (string))
+  (definition
+   variable: (identifier)
+   value: (string (quoted_string (quoted_string_text_fragment))))))
+
+===================
+Regular with global
+===================
+
+global {A=1,B=2}
+{A=1,B=2}
+global {A=1,B=2}
+{A="1",B="2"}
+global {A=1,B=2}
+
+---
+
+(source_file
+ (global
+  (definition variable: (identifier) value: (string))
+  (definition variable: (identifier) value: (string)))
+ (regular
+  (definition variable: (identifier) value: (string))
+  (definition variable: (identifier) value: (string)))
+ (global
+  (definition variable: (identifier) value: (string))
+  (definition variable: (identifier) value: (string)))
+ (regular
+  (definition
+   variable: (identifier)
+   value: (string (quoted_string (quoted_string_text_fragment))))
+  (definition
+   variable: (identifier)
+   value: (string (quoted_string (quoted_string_text_fragment)))))
+ (global
+  (definition variable: (identifier) value: (string))
+  (definition variable: (identifier) value: (string))))
+

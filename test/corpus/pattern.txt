@@ -1,0 +1,88 @@
+==============
+Simple pattern
+==============
+
+pattern {var1, var2}
+    {set1_val1, set1_val2}
+    {"set2_val1", "set2_\"val2"}
+
+---
+
+(source_file
+ (pattern
+  (pattern_variables
+   (identifier)
+   (identifier))
+  (pattern_values
+   (string)
+   (string))
+  (pattern_values
+   (string (quoted_string (quoted_string_text_fragment)))
+   (string
+	(quoted_string
+	 (quoted_string_text_fragment)
+	 (escape_sequence)
+	 (quoted_string_text_fragment))))))
+
+===================
+Pattern with global
+===================
+
+global {a=1}
+pattern {var1}
+	global {a=1}
+    {set1_val1}
+	global {a=1}
+
+---
+
+(source_file
+ (global (definition variable: (identifier) value: (string)))
+ (pattern
+  (pattern_variables (identifier))
+  (global (definition variable: (identifier) value: (string)))
+  (pattern_values (string))
+  (global (definition variable: (identifier) value: (string)))))
+
+===============
+Example pattern
+===============
+
+global {gbl_var1=gbl_val1, gbl_var2=gbl_val2}
+pattern {var1, var2}
+    {set1_val1, set1_val2}
+    {set2_val1, set2_val2}
+pattern {var2, var1}
+global {gbl_var1=gbl_val3, gbl_var2=gbl_val4}
+    {set3_val2, set3_val1}
+    {set4_val2, set4_val2}
+
+---
+
+(source_file
+ (global
+  (definition variable: (identifier) value: (string))
+  (definition variable: (identifier) value: (string)))
+ (pattern
+  (pattern_variables
+   (identifier)
+   (identifier))
+  (pattern_values
+   (string)
+   (string))
+  (pattern_values
+   (string)
+   (string)))
+ (pattern
+  (pattern_variables
+   (identifier)
+   (identifier))
+  (global
+   (definition variable: (identifier) value: (string))
+   (definition variable: (identifier) value: (string)))
+  (pattern_values
+   (string)
+   (string))
+  (pattern_values
+   (string)
+   (string))))

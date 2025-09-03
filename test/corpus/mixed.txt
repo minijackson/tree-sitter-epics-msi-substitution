@@ -1,0 +1,29 @@
+=========
+All types
+=========
+
+global {A=1}
+{A=1}
+pattern {A} {1}
+file a.template {
+    global {A=1}
+    {A=1}
+    pattern {A} {1}
+}
+
+---
+
+(source_file
+ (global (definition variable: (identifier) value: (string)))
+ (regular (definition variable: (identifier) value: (string)))
+ (pattern
+  (pattern_variables (identifier))
+  (pattern_values (string)))
+ (db_template
+   file: (string)
+   (substitutions
+	(global (definition variable: (identifier) value: (string)))
+	(regular (definition variable: (identifier) value: (string)))
+	(pattern
+	 (pattern_variables (identifier))
+	 (pattern_values (string))))))
