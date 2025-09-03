@@ -16,24 +16,41 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) =>
-      choice(repeat($.regular), repeat($.pattern), repeat($.db_template)),
+      repeat(
+        choice(
+          $.global,
+          $.regular,
+          $.pattern,
+          $.db_template,
+        )
+      ),
 
     comment: ($) => seq("#", /.*/),
 
-    regular: ($) =>
-      seq("{", repeat(seq($._regular_assignment, optional(","))), "}"),
-    _regular_assignment: ($) => seq($.identifier, "=", $.string),
+    global: ($) => seq("global", $._regular_variables),
+
+    regular: ($) => $._regular_variables,
+
+    _regular_variables: ($) =>
+      seq("{", repeat(seq($.definition, optional(","))), "}"),
+    definition: ($) => seq(
+      field("variable", $.identifier),
+      "=",
+      field("value", $.string)),
 
     pattern: ($) =>
-      seq("pattern", $.pattern_variables, repeat($.pattern_values)),
+      prec.right(seq("pattern", $.pattern_variables, repeat($._pattern_definition))),
+
     pattern_variables: ($) =>
       seq("{", repeat(seq($.identifier, optional(","))), "}"),
+
+    _pattern_definition: ($) => choice($.global, $.pattern_values),
     pattern_values: ($) => seq("{", repeat(seq($.string, optional(","))), "}"),
 
     db_template: ($) => seq("file", field("file", $.string), $.substitutions),
 
     substitutions: ($) =>
-      seq("{", choice(repeat($.regular), repeat($.pattern)), "}"),
+      seq("{", repeat(choice($.global, $.regular, $.pattern)), "}"),
 
     identifier: ($) => /\w+/,
 

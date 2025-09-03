@@ -31,9 +31,50 @@
     }
   },
   {
+    "type": "definition",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "variable": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "escape_sequence",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "global",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "definition",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "macro_expansion",
@@ -58,6 +99,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "global",
+          "named": true
+        },
         {
           "type": "pattern_values",
           "named": true
@@ -132,11 +177,7 @@
       "required": false,
       "types": [
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "string",
+          "type": "definition",
           "named": true
         }
       ]
@@ -153,6 +194,10 @@
       "types": [
         {
           "type": "db_template",
+          "named": true
+        },
+        {
+          "type": "global",
           "named": true
         },
         {
@@ -189,6 +234,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "global",
+          "named": true
+        },
         {
           "type": "pattern",
           "named": true
@@ -242,6 +291,10 @@
   },
   {
     "type": "file",
+    "named": false
+  },
+  {
+    "type": "global",
     "named": false
   },
   {

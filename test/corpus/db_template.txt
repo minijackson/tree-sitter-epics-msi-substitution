@@ -12,7 +12,7 @@ file "myDBfile.template" {
 
 (source_file
  (db_template
-  (string (quoted_string (quoted_string_text_fragment)))
+  file: (string (quoted_string (quoted_string_text_fragment)))
   (substitutions
    (pattern
 	(pattern_variables (identifier) (identifier))
@@ -29,21 +29,52 @@ Simple unquoted
 
 file myDBfile.template {
     pattern { PREFIX,     SCAN }
-            { "P" "1 second"}
-            { "P" "3 second"}
+            { P, "1 second"}
+            { P, "3 second"}
 }
 
 ---
 
 (source_file
  (db_template
-  (string)
+  file: (string)
   (substitutions
    (pattern
 	(pattern_variables (identifier) (identifier))
 	(pattern_values
-	 (string (quoted_string (quoted_string_text_fragment)))
+	 (string)
 	 (string (quoted_string (quoted_string_text_fragment))))
 	(pattern_values
-	 (string (quoted_string (quoted_string_text_fragment)))
+	 (string)
 	 (string (quoted_string (quoted_string_text_fragment))))))))
+
+=====================
+Template with globals
+=====================
+
+global {A=1}
+file myDBfile.template {
+	global {A=1}
+    pattern { B }
+		global {A=1}
+		{ 1 }
+		global {A=1}
+		{ 2 }
+		global {A=1}
+}
+
+---
+
+(source_file
+ (global (definition variable: (identifier) value: (string)))
+ (db_template
+  file: (string)
+  (substitutions
+   (global (definition variable: (identifier) value: (string)))
+   (pattern
+	(pattern_variables (identifier))
+    (global (definition variable: (identifier) value: (string)))
+	(pattern_values (string))
+    (global (definition variable: (identifier) value: (string)))
+	(pattern_values (string))
+    (global (definition variable: (identifier) value: (string)))))))

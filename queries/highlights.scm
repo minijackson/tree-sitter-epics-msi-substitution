@@ -13,6 +13,7 @@
 "=" @punctuation.special
 
 [
+ "global"
  "pattern"
  "file"
 ] @keyword
