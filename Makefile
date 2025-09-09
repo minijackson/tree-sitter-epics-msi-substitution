@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-epics-msi-substitution
 HOMEPAGE_URL := https://github.com/minijackson/tree-sitter-epics-msi-substitution
-VERSION := 0.2.0
+VERSION := 0.2.1
 
 # repository
 SRC_DIR := src
