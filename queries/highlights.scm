@@ -1,6 +1,6 @@
 (source_file) @local.scope
 
-(identifier) @identifier
+(identifier) @variable
 
 (string) @string
 (escape_sequence) @string.special
