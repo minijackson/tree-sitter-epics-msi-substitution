@@ -1,7 +1,7 @@
 global {a=1}
 # <- @keyword
 #      ^ @punctuation.bracket
-#       ^ @identifier
+#       ^ @variable
 #        ^ @punctuation.special
 #         ^ @string
 #          ^ @punctuation.bracket
@@ -9,15 +9,15 @@ global {a=1}
 pattern {var1, var2}
 # <- @keyword
 #       ^ @punctuation.bracket
-#        ^ @identifier
+#        ^ @variable
 #            ^ @punctuation.delimiter
-#              ^ @identifier
+#              ^ @variable
 #                  ^ @punctuation.bracket
 
     global {a=1}
 #   ^ @keyword
 #          ^ @punctuation.bracket
-#           ^ @identifier
+#           ^ @variable
 #            ^ @punctuation.special
 #             ^ @string
 #              ^ @punctuation.bracket
@@ -33,7 +33,7 @@ pattern {var1, var2}
     global {a=1}
 #   ^ @keyword
 #          ^ @punctuation.bracket
-#           ^ @identifier
+#           ^ @variable
 #            ^ @punctuation.special
 #             ^ @string
 #              ^ @punctuation.bracket

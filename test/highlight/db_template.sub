@@ -1,7 +1,7 @@
 global {A=1}
 # <- @keyword
 #      ^ @punctuation.bracket
-#       ^ @identifier
+#       ^ @variable
 #        ^ @punctuation.special
 #         ^ @string
 #          ^ @punctuation.bracket
@@ -14,7 +14,7 @@ file myDBfile.template {
     global {A=1}
 #   ^ @keyword
 #          ^ @punctuation.bracket
-#           ^ @identifier
+#           ^ @variable
 #            ^ @punctuation.special
 #             ^ @string
 #              ^ @punctuation.bracket
@@ -22,13 +22,13 @@ file myDBfile.template {
     pattern { B }
 #   ^ @keyword
 #           ^ @punctuation.bracket
-#             ^ @identifier
+#             ^ @variable
 #               ^ @punctuation.bracket
 
         global {A=1}
 #       ^ @keyword
 #              ^ @punctuation.bracket
-#               ^ @identifier
+#               ^ @variable
 #                ^ @punctuation.special
 #                 ^ @string
 #                  ^ @punctuation.bracket
@@ -41,7 +41,7 @@ file myDBfile.template {
         global {A=1}
 #       ^ @keyword
 #              ^ @punctuation.bracket
-#               ^ @identifier
+#               ^ @variable
 #                ^ @punctuation.special
 #                 ^ @string
 #                  ^ @punctuation.bracket
@@ -54,7 +54,7 @@ file myDBfile.template {
         global {A=1}
 #       ^ @keyword
 #              ^ @punctuation.bracket
-#               ^ @identifier
+#               ^ @variable
 #                ^ @punctuation.special
 #                 ^ @string
 #                  ^ @punctuation.bracket

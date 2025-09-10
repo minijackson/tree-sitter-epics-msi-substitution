@@ -1,11 +1,11 @@
 global {M1=hello, M2="hello"}
 # <- @keyword
 #      ^ @punctuation.bracket
-#       ^ @identifier
+#       ^ @variable
 #         ^ @punctuation.special
 #          ^ @string
 #               ^ @punctuation.delimiter
-#                 ^ @identifier
+#                 ^ @variable
 #                   ^ @punctuation.special
 #                    ^ @string
 #                     ^ @string
@@ -13,11 +13,11 @@ global {M1=hello, M2="hello"}
 
 {M1=hello, M2="hello\"${P}"}
 # <- @punctuation.bracket
-# ^ @identifier
+# ^ @variable
 #  ^ @punctuation.special
 #   ^ @string
 #        ^ @punctuation.delimiter
-#          ^ @identifier
+#          ^ @variable
 #            ^ @punctuation.special
 #             ^ @string
 #              ^ @string
