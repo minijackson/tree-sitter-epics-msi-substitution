@@ -52,11 +52,11 @@ module.exports = grammar({
     substitutions: ($) =>
       seq("{", repeat(choice($.global, $.regular, $.pattern)), "}"),
 
-    identifier: ($) => /\w+/,
+    identifier: ($) => choice($._bareword, $.quoted_string),
 
     string: ($) => choice($._bareword, $.quoted_string),
 
-	_bareword: ($) => /[a-zA-Z0-9_\-+:./\\\[\]<>;]+/,
+    _bareword: ($) => /[^",{}=\s]+/,
 
     quoted_string: ($) =>
       seq(

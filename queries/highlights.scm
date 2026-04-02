@@ -1,5 +1,3 @@
-(source_file) @local.scope
-
 (identifier) @variable
 
 (string) @string

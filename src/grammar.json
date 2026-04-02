@@ -284,8 +284,17 @@
       ]
     },
     "identifier": {
-      "type": "PATTERN",
-      "value": "\\w+"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_bareword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "quoted_string"
+        }
+      ]
     },
     "string": {
       "type": "CHOICE",
@@ -302,7 +311,7 @@
     },
     "_bareword": {
       "type": "PATTERN",
-      "value": "[a-zA-Z0-9_\\-+:./\\\\\\[\\]<>;]+"
+      "value": "[^\",{}=\\s]+"
     },
     "quoted_string": {
       "type": "SEQ",

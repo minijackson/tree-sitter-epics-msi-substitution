@@ -29,11 +29,11 @@ Simple regular
 Regular with global
 ===================
 
+global {A=1,B-C=2}
+{A=1,"B"=2}
 global {A=1,B=2}
-{A=1,B=2}
-global {A=1,B=2}
-{A="1",B="2"}
-global {A=1,B=2}
+{A="1",B-C="2"}
+global {A=1,"B"=2}
 
 ---
 
@@ -43,7 +43,7 @@ global {A=1,B=2}
   (definition variable: (identifier) value: (string)))
  (regular
   (definition variable: (identifier) value: (string))
-  (definition variable: (identifier) value: (string)))
+  (definition variable: (identifier (quoted_string (quoted_string_text_fragment))) value: (string)))
  (global
   (definition variable: (identifier) value: (string))
   (definition variable: (identifier) value: (string)))
@@ -56,5 +56,5 @@ global {A=1,B=2}
    value: (string (quoted_string (quoted_string_text_fragment)))))
  (global
   (definition variable: (identifier) value: (string))
-  (definition variable: (identifier) value: (string))))
+  (definition variable: (identifier (quoted_string (quoted_string_text_fragment))) value: (string))))
 
