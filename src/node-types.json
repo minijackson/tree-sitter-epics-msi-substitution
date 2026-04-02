@@ -2,6 +2,7 @@
   {
     "type": "comment",
     "named": true,
+    "extra": true,
     "fields": {}
   },
   {
@@ -94,6 +95,7 @@
   {
     "type": "macro_expansion",
     "named": true,
+    "extra": true,
     "fields": {},
     "children": {
       "multiple": true,
